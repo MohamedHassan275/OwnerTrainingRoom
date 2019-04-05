@@ -6,7 +6,6 @@ import android.database.Cursor;
 import android.net.Uri;
 import android.os.Build;
 import android.provider.MediaStore;
-import android.support.annotation.Nullable;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -26,7 +25,7 @@ import java.util.List;
 public class AddTrainingRoomsActivity extends AppCompatActivity implements AddTrainingRoomsContract.view {
 
     ImageView imageView;
-    Button Addphoto,AddRooms,AddTrainingRooms;
+    Button Addphoto, AddRoomss,AddTrainingRooms;
     int PICK_IMAGE_MULTIPLE = 1;
     String imageEncoded;
     List<String> imagesEncodedList;
@@ -43,7 +42,7 @@ public class AddTrainingRoomsActivity extends AppCompatActivity implements AddTr
 
      //   imageView = findViewById(R.id.image_view);
         Addphoto = findViewById(R.id.add_photo);
-        AddRooms = findViewById(R.id.add_rooms);
+        AddRoomss = findViewById(R.id.add_rooms);
         AddTrainingRooms = findViewById(R.id.add_training_room_AddRooms);
 
 
