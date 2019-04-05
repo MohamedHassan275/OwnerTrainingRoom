@@ -1,0 +1,14 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="MyRatingBar" parent="Widget.AppCompat.RatingBar.Small">
+        <item name="colorAccent">#DAA520</item>
+        <item name="colorControlNormal">#A9A9A9</item>
+    </style>
+</resources>

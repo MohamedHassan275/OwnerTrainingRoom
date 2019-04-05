@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">حجز القاعات</string>
+    <string name="prompt_email" translatable="false">البريد الاليكتروني</string>
+    <string name="prompt_password" translatable="false">كلمة السر</string>
+</resources>
