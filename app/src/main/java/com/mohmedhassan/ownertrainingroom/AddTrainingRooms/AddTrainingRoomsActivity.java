@@ -46,7 +46,7 @@ public class AddTrainingRoomsActivity extends AppCompatActivity implements AddTr
         AddTrainingRooms = findViewById(R.id.add_training_room_AddRooms);
 
 
-       // Addphoto.setOnClickListener(View->AddPhoto());
+       // Addphoto.setOnClickListener(View->AddPhotoo());
         Addphoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,12 +144,12 @@ public class AddTrainingRoomsActivity extends AppCompatActivity implements AddTr
     }
 
     @Override
-    public void AddRooms() {
+    public void AddRoomss() {
 
     }
 
     @Override
-    public void AddPhoto() {
+    public void AddPhotoo() {
 
     }
 }
