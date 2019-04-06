@@ -13,15 +13,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".HomeScreen.HomeScreenActivity">
+
+        </activity>
+        <activity android:name=".ShowTrainingRooms.ShowRoomsActivity" />
+        <activity android:name=".AddTrainingRooms.AddTrainingRoomsActivity" />
+        <activity android:name=".Login.LoginActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ShowTrainingRooms.ShowRoomsActivity" />
-        <activity android:name=".AddTrainingRooms.AddTrainingRoomsActivity" />
-        <activity android:name=".Login.LoginActivity" />
         <activity android:name=".AddRooms.AddRoomsActivity"></activity>
     </application>
 

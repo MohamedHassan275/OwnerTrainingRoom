@@ -1,19 +1,20 @@
 package com.mohmedhassan.ownertrainingroom.Login;
 
 import android.app.ProgressDialog;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.text.method.HideReturnsTransformationMethod;
 import android.text.method.PasswordTransformationMethod;
 import android.view.View;
-import android.view.inputmethod.EditorInfo;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.mohmedhassan.ownertrainingroom.HomeScreen.HomeScreenActivity;
 import com.mohmedhassan.ownertrainingroom.R;
 
 public class LoginActivity extends AppCompatActivity implements LoginContract.view{
@@ -121,6 +122,8 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
             showProgress(true);
             loginPresenter.login(email, password);
             Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(LoginActivity.this, HomeScreenActivity.class);
+            startActivity(intent);
 
         }
     }

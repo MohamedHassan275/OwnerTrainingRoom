@@ -4,9 +4,8 @@ import android.content.Context;
 
 import com.mohmedhassan.ownertrainingroom.Model_Login.APIServiceLogin;
 import com.mohmedhassan.ownertrainingroom.Model_Login.APIUrl_Login;
+import com.mohmedhassan.ownertrainingroom.Model_Login.Result_Login;
 import com.mohmedhassan.ownertrainingroom.Model_Login.SessionManagerLogin;
-
-import javax.xml.transform.Result;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -40,26 +39,26 @@ public class LoginPresenter implements LoginContract.Presenter {
         APIServiceLogin service = retrofit.create(APIServiceLogin.class);
 
 
-        Call<Result> call = service.userLogin(email, password);
+        Call<Result_Login> call = service.userLogin(email, password);
 
-        call.enqueue(new Callback<Result>() {
+        call.enqueue(new Callback<Result_Login>() {
             @Override
-            public void onResponse(Call<Result> call, Response<Result> response) {
+            public void onResponse(Call<Result_Login> call, Response<Result_Login> response) {
 
                 mView.showProgress(false);
 
-                mView.showMessage(response.body().get);
+                mView.showMessage(response.body().getMessage());
 
                 if (!response.body().getError()) {
 
                     SessionManagerLogin.getInstance(mContext).createLoginSession(response.body().getUser());
-                    mView.BtnLogin();
+                    mView.attemptLogin();
                 }
 
             }
 
             @Override
-            public void onFailure(Call<Result> call, Throwable t) {
+            public void onFailure(Call<Result_Login> call, Throwable t) {
 
                 mView.showProgress(false);
                 mView.showMessage(t.getMessage());
