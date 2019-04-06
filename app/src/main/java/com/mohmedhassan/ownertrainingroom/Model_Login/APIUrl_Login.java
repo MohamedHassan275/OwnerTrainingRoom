@@ -5,4 +5,6 @@ package com.mohmedhassan.ownertrainingroom.Model_Login;
  */
 
 public class APIUrl_Login {
+
+    public static final String BASE_URL = "http://ifgs.info/training_hub/public/";
 }

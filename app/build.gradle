@@ -22,6 +22,7 @@ android {
         resolutionStrategy.force 'junit:junit:4.11'
     }
 
+
 }
 
 dependencies {

@@ -8,13 +8,21 @@ public interface LoginContract {
 
     interface view{
 
-       void Login();
+        void showMessage(String message);
 
+
+        void showProgress(boolean show);
+
+        boolean isEmailValid(String email);
+
+        boolean isPasswordValid(String password);
+
+        void attemptLogin();
     }
 
     interface Presenter{
 
-
+        void login(String email, String password);
     }
 
 }
