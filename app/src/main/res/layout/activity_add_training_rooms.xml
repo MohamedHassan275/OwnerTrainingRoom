@@ -3,268 +3,257 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="#edc357"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#ede8e8"
     tools:context=".AddTrainingRooms.AddTrainingRoomsActivity">
 
-  <ScrollView
-      android:layout_width="match_parent"
-      android:layout_height="match_parent">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-      <LinearLayout
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:orientation="vertical">
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-         <ImageView
-             android:layout_marginTop="10dp"
-             android:id="@+id/imageView"
-             android:layout_width="150dp"
-             android:layout_height="100dp"/>
-         <LinearLayout
-             android:orientation="vertical"
-             android:layout_width="match_parent"
-             android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerview_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+            <ImageView
+                android:id="@+id/imageView_photo"
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/camera"/>
+            <ImageView
+                android:id="@+id/image_photo"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/camera"/>
 
-             <LinearLayout
-                 android:gravity="center"
-                 android:orientation="horizontal"
-                 android:layout_width="match_parent"
-                 android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:textColorHint="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-                 <ImageView
-                     android:layout_marginTop="10dp"
-                     android:id="@+id/imageView2"
-                     android:layout_width="50dp"
-                     android:layout_height="50dp"
-                     android:layout_gravity="center"
-                     android:src="@drawable/camera"/>
-                 <ImageView
-                     android:layout_marginTop="10dp"
-                     android:id="@+id/imageView3"
-                     android:layout_width="50dp"
-                     android:layout_height="50dp"
-                     android:layout_gravity="center"
-                     android:src="@drawable/camera"/>
-                 <ImageView
-                     android:layout_marginTop="10dp"
-                     android:id="@+id/imageView4"
-                     android:layout_width="50dp"
-                     android:layout_height="50dp"
-                     android:layout_gravity="center"
-                     android:src="@drawable/camera"/>
-                 <ImageView
-                     android:layout_marginTop="10dp"
-                     android:id="@+id/imageView5"
-                     android:layout_width="50dp"
-                     android:layout_height="50dp"
-                     android:layout_gravity="center"
-                     android:src="@drawable/camera"/>
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:hint="Name"
+                    android:padding="7dp"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
 
-             </LinearLayout>
+            </android.support.design.widget.TextInputLayout>
 
-         </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:textColorHint="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-          <android.support.design.widget.TextInputLayout
-              android:layout_marginTop="10dp"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/government"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:hint="Government"
+                    android:padding="7dp"
+                    android:gravity="center"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_gravity="center"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:textSize="15sp" />
 
-              <EditText
-                  android:id="@+id/name"
-                  android:layout_width="match_parent"
-                  android:layout_height="35dp"
-                  android:background="@drawable/edit_textdesign"
-                  android:hint="Name"
-                  android:padding="7dp"
-                  android:inputType="text"
-                  android:maxLines="1"
-                  android:paddingLeft="10dp"
-                  android:singleLine="true"
-                  android:textSize="15sp" />
+            </android.support.design.widget.TextInputLayout>
 
-          </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:textColorHint="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-          <android.support.design.widget.TextInputLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/city"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:hint="City"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="15sp"
+                    android:padding="7dp"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:inputType="textEmailAddress"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
 
-              <EditText
-                  android:id="@+id/government"
-                  android:layout_width="match_parent"
-                  android:layout_height="35dp"
-                  android:background="@drawable/edit_textdesign"
-                  android:hint="Government"
-                  android:textSize="15sp"
-                  android:padding="7dp"
-                  android:paddingLeft="10dp"
-                  android:inputType="text"
-                  android:maxLines="1"
-                  android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
 
-          </android.support.design.widget.TextInputLayout>
-          <android.support.design.widget.TextInputLayout
-              android:layout_marginTop="5dp"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:textColorHint="#ffffff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
 
-              <EditText
-                  android:id="@+id/city"
-                  android:layout_width="match_parent"
-                  android:layout_height="35dp"
-                  android:background="@drawable/edit_textdesign"
-                  android:hint="City"
-                  android:padding="7dp"
-                  android:textSize="15sp"
-                  android:inputType="text"
-                  android:maxLines="1"
-                  android:paddingLeft="10dp"
-                  android:singleLine="true"/>
+                <EditText
+                    android:id="@+id/mobile_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:hint="mobile Number"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textSize="15sp"
+                    android:textColor="#ffffff"
+                    android:inputType="number"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:maxLines="1"
+                    android:singleLine="true"/>
 
-          </android.support.design.widget.TextInputLayout>
-          <android.support.design.widget.TextInputLayout
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content">
+            </android.support.design.widget.TextInputLayout>
 
-              <EditText
-                  android:id="@+id/mobile"
-                  android:layout_width="match_parent"
-                  android:layout_height="35dp"
-                  android:background="@drawable/edit_textdesign"
-                  android:hint="mobile Number"
-                  android:textSize="15sp"
-                  android:padding="7dp"
-                  android:inputType="number"
-                  android:paddingLeft="10dp"
-                  android:maxLines="1"
-                  android:singleLine="true"/>
+            <MultiAutoCompleteTextView
+                android:id="@+id/details"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:textColorHint="#ffffff"
+                android:gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:hint="Details"
+                android:layout_marginTop="10dp"
+                android:padding="7dp"
+                android:background="@drawable/edittext_design"
+                android:singleLine="true"/>
 
-          </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-          <MultiAutoCompleteTextView
-              android:id="@+id/details"
-              android:layout_width="match_parent"
-              android:layout_height="35dp"
-              android:hint="Details"
-              android:layout_marginTop="10dp"
-              android:padding="7dp"
-              android:background="@drawable/edit_textdesign"
-              android:singleLine="true"/>
-          <LinearLayout
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Time Of Work "
+                    android:textColor="#f40404"
+                    android:textSize="17sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_gravity="center"/>
 
-              <TextView
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content"
-                  android:text="Time Of Work "
-                  android:textColor="#000"
-                  android:textSize="17sp"
-                  android:layout_marginTop="10dp"
-                  android:layout_gravity="center"/>
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
-              <LinearLayout
-                  android:orientation="horizontal"
-                  android:layout_width="match_parent"
-                  android:layout_height="wrap_content">
+                    <android.support.design.widget.TextInputLayout
+                            android:textColorHint="#ffffff"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                  <LinearLayout
-                      android:layout_weight="1"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content">
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="From"
-                          android:layout_marginLeft="15sp"
-                          android:textColor="#000"
-                          android:layout_gravity="center"
-                          android:textSize="15sp"/>
-                      <android.support.design.widget.TextInputLayout
-                          android:layout_width="match_parent"
-                          android:layout_height="wrap_content">
+                            <EditText
+                                android:id="@+id/from"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/edittext_design"
+                                android:hint="From"
+                                android:gravity="center"
+                                android:padding="7dp"
+                                android:paddingLeft="10dp"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginLeft="25dp"
+                                android:textSize="15sp"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:singleLine="true"/>
 
-                          <EditText
-                              android:id="@+id/from"
-                              android:layout_width="match_parent"
-                              android:layout_height="35dp"
-                              android:background="@drawable/edit_textdesign"
-                              android:hint="From"
-                              android:padding="7dp"
-                              android:paddingLeft="10dp"
-                              android:layout_marginRight="25dp"
-                              android:layout_marginLeft="25dp"
-                              android:textSize="15sp"
-                              android:inputType="number"
-                              android:maxLines="1"
-                              android:singleLine="true"/>
+                        </android.support.design.widget.TextInputLayout>
 
-                      </android.support.design.widget.TextInputLayout>
-                  </LinearLayout>
-                  <LinearLayout
-                      android:layout_weight="1"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content">
-                      <TextView
-                          android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:text="To"
-                          android:layout_marginLeft="15sp"
-                          android:textColor="#000"
-                          android:textSize="15sp"
-                          android:layout_gravity="center"/>
-                      <android.support.design.widget.TextInputLayout
-                          android:layout_width="match_parent"
-                          android:layout_height="wrap_content">
 
-                          <EditText
-                              android:id="@+id/to"
-                              android:layout_width="match_parent"
-                              android:layout_height="35dp"
-                              android:background="@drawable/edit_textdesign"
-                              android:hint="To"
-                              android:padding="7dp"
-                              android:paddingLeft="10dp"
-                              android:layout_marginRight="25dp"
-                              android:layout_marginLeft="25dp"
-                              android:textSize="15sp"
-                              android:inputType="number"
-                              android:maxLines="1"
-                              android:singleLine="true"/>
+                        <android.support.design.widget.TextInputLayout
+                            android:textColorHint="#ffffff"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
 
-                      </android.support.design.widget.TextInputLayout>
-                  </LinearLayout>
-              </LinearLayout>
-          </LinearLayout>
+                            <EditText
+                                android:id="@+id/to"
+                                android:layout_width="match_parent"
+                                android:layout_height="35dp"
+                                android:background="@drawable/edittext_design"
+                                android:hint="To"
+                                android:gravity="center"
+                                android:padding="7dp"
+                                android:paddingLeft="10dp"
+                                android:layout_marginRight="25dp"
+                                android:layout_marginLeft="25dp"
+                                android:textSize="15sp"
+                                android:inputType="number"
+                                android:maxLines="1"
+                                android:singleLine="true"/>
 
-          <Button
-              android:id="@+id/add_rooms"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginLeft="85dp"
-              android:layout_marginRight="85dp"
-              android:layout_marginTop="10dp"
-              android:text="Add Rooms"
-              android:textColor="#494444"
-              android:textAllCaps="false"
-              android:textSize="12sp"
-              android:background="@drawable/edit_textdesign"/>
-          <Button
-              android:id="@+id/add_training_room_AddRooms"
-              android:layout_width="match_parent"
-              android:layout_height="wrap_content"
-              android:layout_marginLeft="50dp"
-              android:layout_marginRight="50dp"
-              android:layout_marginTop="10dp"
-              android:layout_marginBottom="10dp"
-              android:text="Add Training Room"
-              android:textColor="#494444"
-              android:textAllCaps="false"
-              android:textSize="12sp"
-              android:background="@drawable/edit_textdesign"/>
-      </LinearLayout>
+                        </android.support.design.widget.TextInputLayout>
 
-  </ScrollView>
+                </LinearLayout>
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+
+                </android.support.v7.widget.RecyclerView>
+
+                <Button
+                    android:id="@+id/btn_addRooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="15dp"
+                    android:text="Add Rooms"
+                    android:textColor="#ffffff"
+                    android:textAllCaps="false"
+                    android:textSize="17sp"
+                    android:background="@drawable/btn_design"/>
+                <Button
+                    android:id="@+id/btn_addTrainingRooms"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Add Training Rooms"
+                    android:textColor="#ffffff"
+                    android:textAllCaps="false"
+                    android:textSize="17sp"
+                    android:background="@drawable/btn_design"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>

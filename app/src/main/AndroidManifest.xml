@@ -12,19 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".HomeScreen.HomeScreenActivity">
-
-        </activity>
-        <activity android:name=".ShowTrainingRooms.ShowRoomsActivity" />
-        <activity android:name=".AddTrainingRooms.AddTrainingRoomsActivity" />
-        <activity android:name=".Login.LoginActivity" >
+        <activity
+            android:name=".HomeScreen.HomeScreenActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddRooms.AddRoomsActivity"></activity>
+        <activity
+            android:name=".ShowTrainingRooms.ShowRoomsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".AddTrainingRooms.AddTrainingRoomsActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+        <activity
+            android:name=".Login.LoginActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
+        <activity
+            android:name=".AddRooms.AddRoomsActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

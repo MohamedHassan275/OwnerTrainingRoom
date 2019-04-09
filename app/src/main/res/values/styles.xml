@@ -11,4 +11,9 @@
         <item name="colorAccent">#DAA520</item>
         <item name="colorControlNormal">#A9A9A9</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
 </resources>
