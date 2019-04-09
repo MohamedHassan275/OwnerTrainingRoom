@@ -14,6 +14,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.mohmedhassan.ownertrainingroom.HomeLoginAndContactUs.HomeLoginAndContactUsActivity;
 import com.mohmedhassan.ownertrainingroom.HomeScreen.HomeScreenActivity;
 import com.mohmedhassan.ownertrainingroom.R;
 
@@ -43,10 +44,6 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
         checkBoxShowPassword = findViewById(R.id.checkboxPassword_Login);
         Login = findViewById(R.id.btnlogin);
 
-
-
-
-
         checkBoxShowPassword.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
@@ -61,20 +58,10 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
             }
         });
 
-        Login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                attemptLogin();
-            }
-        });
-       /* mPasswordView.setOnEditorActionListener((textView, id, keyEvent) -> {
-            if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
-                attemptLogin();
-                return true;
-            }
-            return false;
-        });*/
+       // attemptLogin();
+        Login.setOnClickListener(view-> attemptLogin());
+
     }
 
     @Override
@@ -121,9 +108,9 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
             // perform the user login attempt.
             showProgress(true);
             loginPresenter.login(email, password);
-            Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
-            Intent intent = new Intent(LoginActivity.this, HomeScreenActivity.class);
-            startActivity(intent);
+           // Toast.makeText(this, "Welcome", Toast.LENGTH_SHORT).show();
+           /* Intent intent = new Intent(LoginActivity.this, HomeLoginAndContactUsActivity.class);
+            startActivity(intent);*/
 
         }
     }
@@ -157,6 +144,15 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
     @Override
     public boolean isPasswordValid(String password) {
         return password.length() > 5;
+
+    }
+
+    @Override
+    public void BtnLogin() {
+
+        Intent intent = new Intent(LoginActivity.this, HomeScreenActivity.class);
+        startActivity(intent);
+        finish();
 
     }
 

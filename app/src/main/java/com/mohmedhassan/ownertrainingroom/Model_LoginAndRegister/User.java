@@ -1,15 +1,15 @@
-package com.mohmedhassan.ownertrainingroom.Model_Login;
+package com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister;
 
 /**
  * Created by MOHMED on 4/2/2019.
  */
 
-public class UserLogin {
+public class User {
 
     int id;
     String  Email, Passwored;
 
-    public UserLogin(int id, String email, String passwored) {
+    public User(int id, String email, String passwored) {
         this.id = id;
         Email = email;
         Passwored = passwored;

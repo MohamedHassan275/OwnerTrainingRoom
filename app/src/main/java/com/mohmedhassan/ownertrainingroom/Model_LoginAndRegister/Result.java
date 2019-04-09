@@ -1,4 +1,4 @@
-package com.mohmedhassan.ownertrainingroom.Model_Login;
+package com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister;
 
 /**
  * Created by MOHMED on 4/2/2019.
@@ -6,7 +6,7 @@ package com.mohmedhassan.ownertrainingroom.Model_Login;
 import com.google.gson.annotations.SerializedName;
 
 
-public class Result_Login {
+public class Result {
 
     @SerializedName("error")
     private Boolean error;
@@ -15,9 +15,9 @@ public class Result_Login {
     private String message;
 
     @SerializedName("user")
-    private UserLogin user;
+    private User user;
 
-    public Result_Login(Boolean error, String message, UserLogin user) {
+    public Result(Boolean error, String message, User user) {
         this.error = error;
         this.message = message;
         this.user = user;
@@ -31,7 +31,7 @@ public class Result_Login {
         return message;
     }
 
-    public UserLogin getUser() {
+    public User getUser() {
         return user;
     }
 

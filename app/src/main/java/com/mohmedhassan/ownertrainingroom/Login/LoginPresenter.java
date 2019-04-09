@@ -2,10 +2,10 @@ package com.mohmedhassan.ownertrainingroom.Login;
 
 import android.content.Context;
 
-import com.mohmedhassan.ownertrainingroom.Model_Login.APIServiceLogin;
-import com.mohmedhassan.ownertrainingroom.Model_Login.APIUrl_Login;
-import com.mohmedhassan.ownertrainingroom.Model_Login.Result_Login;
-import com.mohmedhassan.ownertrainingroom.Model_Login.SessionManagerLogin;
+import com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister.APIService;
+import com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister.APIUrl;
+import com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister.Result;
+import com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister.SessionManagerLogin;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,18 +32,18 @@ public class LoginPresenter implements LoginContract.Presenter {
     public void login(String email, String password) {
 
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(APIUrl_Login.BASE_URL)
+                .baseUrl(APIUrl.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 
-        APIServiceLogin service = retrofit.create(APIServiceLogin.class);
+        APIService service = retrofit.create(APIService.class);
 
 
-        Call<Result_Login> call = service.userLogin(email, password);
+        Call<Result> call = service.Login(email, password);
 
-        call.enqueue(new Callback<Result_Login>() {
+        call.enqueue(new Callback<Result>() {
             @Override
-            public void onResponse(Call<Result_Login> call, Response<Result_Login> response) {
+            public void onResponse(Call<Result> call, Response<Result> response) {
 
                 mView.showProgress(false);
 
@@ -52,13 +52,13 @@ public class LoginPresenter implements LoginContract.Presenter {
                 if (!response.body().getError()) {
 
                     SessionManagerLogin.getInstance(mContext).createLoginSession(response.body().getUser());
-                    mView.attemptLogin();
+                    mView.BtnLogin();
                 }
 
             }
 
             @Override
-            public void onFailure(Call<Result_Login> call, Throwable t) {
+            public void onFailure(Call<Result> call, Throwable t) {
 
                 mView.showProgress(false);
                 mView.showMessage(t.getMessage());

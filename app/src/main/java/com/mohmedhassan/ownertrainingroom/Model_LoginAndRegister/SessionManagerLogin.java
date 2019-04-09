@@ -1,10 +1,10 @@
-package com.mohmedhassan.ownertrainingroom.Model_Login;
+package com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister;
 
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.mohmedhassan.ownertrainingroom.HomeScreen.HomeScreenActivity;
+import com.mohmedhassan.ownertrainingroom.HomeLoginAndContactUs.HomeLoginAndContactUsActivity;
 import com.mohmedhassan.ownertrainingroom.Login.LoginActivity;
 
 /**
@@ -78,7 +78,7 @@ public class SessionManagerLogin {
     /**
      * Create login session
      * */
-    public void createLoginSession(UserLogin user){
+    public void createLoginSession(User user){
 
         SharedPreferences sharedPreferences = _context.getSharedPreferences(PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -104,7 +104,7 @@ public class SessionManagerLogin {
         if(this.isLoggedIn()){
 
             // user is logged in redirect him to Main Activity
-            Intent i = new Intent(_context, HomeScreenActivity.class);
+            Intent i = new Intent(_context, HomeLoginAndContactUsActivity.class);
             // Closing all the Activities
             i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 

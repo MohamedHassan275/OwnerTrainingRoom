@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:elevation="5dp"
-        android:layout_marginTop="37dp"
+        android:layout_marginTop="30dp"
         android:id="@+id/cardview_work_space2"
         android:divider="@android:color/transparent"
         android:dividerHeight="0.0px"
@@ -62,7 +62,7 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="5dp"
-                android:textColorHint="#f5eeee"
+                android:textColorHint="#E4DDDD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -87,7 +87,7 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="10dp"
-                android:textColorHint="#f5eeee"
+                android:textColorHint="#E4DDDD"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -145,7 +145,7 @@
         android:id="@+id/btnlogin"
         style="?android:textAppearanceSmall"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:layout_marginRight="35dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
@@ -153,34 +153,39 @@
         android:text="Log in"
         android:textAllCaps="false"
         android:textColor="#ffffff"
-        android:textSize="22sp"
+        android:textSize="17sp"
         android:textStyle="bold" />
 
-    <LinearLayout
+    <TextView
+        android:layout_marginTop="25dp"
+        android:id="@+id/tv_login_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
         android:layout_gravity="center"
-        android:gravity="center"
+        android:textColor="#e76c07"
+        android:text="Not have email .. Create email ? "/>
+
+    <TextView
+        android:id="@+id/Login_Home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_gravity="center"
+        android:textSize="17sp"
+        android:textColor="#e10c0c"
+        android:text="Contact Us ?"/>
 
-        <TextView
-            android:id="@+id/tv_forgetPassword"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="17sp"
-            android:layout_gravity="center"
-            android:textColor="#e76c07"
-            android:text="Forget Password"/>
-
-        <View
-            android:layout_width="1dp"
-            android:layout_height="25dp"
-            android:layout_margin="10dp"
-            android:background="#ed0808"/>
-
-
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_forgetPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:visibility="gone"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:textColor="#e76c07"
+        android:text="Forget Password"/>
 
 
     <!-- Login progress -->

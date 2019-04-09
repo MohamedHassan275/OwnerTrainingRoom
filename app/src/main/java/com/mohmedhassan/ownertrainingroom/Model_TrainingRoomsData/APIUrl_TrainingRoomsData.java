@@ -5,4 +5,6 @@ package com.mohmedhassan.ownertrainingroom.Model_TrainingRoomsData;
  */
 
 public class APIUrl_TrainingRoomsData {
+
+    public static final String BASE_URL = "http://scienceinourlife.site/rooms/";
 }

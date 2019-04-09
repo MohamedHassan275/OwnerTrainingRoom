@@ -5,4 +5,6 @@ package com.mohmedhassan.ownertrainingroom.Model_TrainingRoomsData;
  */
 
 public class Result_TrainingRoomsData {
+
+    
 }

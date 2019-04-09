@@ -2,18 +2,13 @@ package com.mohmedhassan.ownertrainingroom.HomeScreen;
 
 import android.content.Context;
 
-/**
- * Created by MOHMED on 4/2/2019.
- */
-
-public class HomeScreenPresenter implements HomeScreenContract.Presenter {
-
+public class HomeScreenPresenter implements HomeScreenContact.Presenter {
 
     Context mContext;
-    HomeScreenContract.view mView;
+    HomeScreenContact.view mView;
 
-    public HomeScreenPresenter(Context mcontext, HomeScreenContract.view mView) {
-        this.mContext = mcontext;
+    public HomeScreenPresenter(Context mContext, HomeScreenContact.view mView) {
+        this.mContext = mContext;
         this.mView = mView;
     }
 }

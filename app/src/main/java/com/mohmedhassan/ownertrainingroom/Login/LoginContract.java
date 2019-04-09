@@ -17,6 +17,8 @@ public interface LoginContract {
 
         boolean isPasswordValid(String password);
 
+        void BtnLogin();
+
         void attemptLogin();
     }
 
