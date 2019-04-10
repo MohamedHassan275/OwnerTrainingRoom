@@ -60,7 +60,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
 
 
        // attemptLogin();
-        Login.setOnClickListener(view-> attemptLogin());
+        Login.setOnClickListener(view-> BtnLogin());
 
     }
 
@@ -152,7 +152,7 @@ public class LoginActivity extends AppCompatActivity implements LoginContract.vi
 
         Intent intent = new Intent(LoginActivity.this, HomeScreenActivity.class);
         startActivity(intent);
-        finish();
+       // finish();
 
     }
 

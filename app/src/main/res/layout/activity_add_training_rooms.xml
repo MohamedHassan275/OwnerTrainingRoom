@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:background="#edc357"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/layout_design"
+    android:orientation="vertical"
     tools:context=".AddTrainingRooms.AddTrainingRoomsActivity">
 
     <ScrollView
@@ -13,245 +13,248 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:gravity="center"
             android:orientation="vertical">
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/recyclerview_image"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-            </android.support.v7.widget.RecyclerView>
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
             <ImageView
                 android:id="@+id/imageView_photo"
                 android:layout_width="150dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/camera"/>
+                android:src="@drawable/camera2" />
+
             <ImageView
                 android:id="@+id/image_photo"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
                 android:layout_marginTop="10dp"
-                android:src="@drawable/camera"/>
+                android:src="@drawable/camera2" />
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:textColorHint="#ffffff"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#86B7DF">
 
                 <EditText
                     android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:background="@drawable/edittext_design"
-                    android:hint="Name"
-                    android:padding="7dp"
-                    android:gravity="center"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:gravity="center"
+                    android:hint="Name"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
+                    android:padding="7dp"
                     android:singleLine="true"
+                    android:textColor="#3F51B5"
                     android:textSize="15sp" />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:textColorHint="#ffffff"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#86B7DF">
 
                 <EditText
                     android:id="@+id/city"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:background="@drawable/edittext_design"
-                    android:hint="City"
-                    android:padding="7dp"
-                    android:gravity="center"
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:layout_gravity="center"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:gravity="center"
+                    android:hint="City"
                     android:inputType="text"
                     android:maxLines="1"
+                    android:padding="7dp"
                     android:singleLine="true"
+                    android:textColor="#ffffff"
                     android:textSize="15sp" />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:textColorHint="#ffffff"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#86B7DF">
 
                 <EditText
                     android:id="@+id/Area"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:background="@drawable/edittext_design"
-                    android:hint="Area"
-                    android:gravity="center"
                     android:layout_gravity="center"
-                    android:textSize="15sp"
-                    android:padding="7dp"
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:gravity="center"
+                    android:hint="Area"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:padding="7dp"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:textColorHint="#ffffff"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#86B7DF">
 
                 <EditText
                     android:id="@+id/Address"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:background="@drawable/edittext_design"
-                    android:hint="Address"
-                    android:gravity="center"
                     android:layout_gravity="center"
-                    android:textSize="15sp"
-                    android:padding="7dp"
-                    android:textColor="#ffffff"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:gravity="center"
+                    android:hint="Address"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:padding="7dp"
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:textColorHint="#ffffff"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#86B7DF">
 
                 <EditText
                     android:id="@+id/mobile_phone"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:background="@drawable/edittext_design"
-                    android:hint="mobile Number"
-                    android:gravity="center"
                     android:layout_gravity="center"
-                    android:textSize="15sp"
-                    android:textColor="#ffffff"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:gravity="center"
+                    android:hint="mobile Number"
                     android:inputType="number"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
-                android:layout_marginTop="10dp"
-                android:textColorHint="#ffffff"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:textColorHint="#86B7DF">
 
                 <EditText
                     android:id="@+id/Numberofrooms"
                     android:layout_width="match_parent"
                     android:layout_height="35dp"
-                    android:background="@drawable/edittext_design"
-                    android:hint="Number of rooms"
-                    android:gravity="center"
                     android:layout_gravity="center"
-                    android:textSize="15sp"
-                    android:textColor="#ffffff"
+                    android:layout_marginLeft="35dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/edittext_design"
+                    android:gravity="center"
+                    android:hint="Number of rooms"
                     android:inputType="number"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginRight="15dp"
                     android:maxLines="1"
-                    android:singleLine="true"/>
+                    android:singleLine="true"
+                    android:textColor="#ffffff"
+                    android:textSize="15sp" />
 
             </android.support.design.widget.TextInputLayout>
+
             <LinearLayout
-                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Time Of Work "
-                    android:textColor="#f40404"
-                    android:textSize="17sp"
+                    android:layout_gravity="center"
                     android:layout_marginTop="10dp"
-                    android:layout_gravity="center"/>
+                    android:text="Time Of Work "
+                    android:textColor="#F1EAEA"
+                    android:textSize="17sp" />
 
                 <LinearLayout
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
 
                     <android.support.design.widget.TextInputLayout
-                            android:textColorHint="#ffffff"
-                            android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="#86B7DF">
+
+                        <EditText
+                            android:id="@+id/from"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:background="@drawable/edittext_design"
+                            android:gravity="center"
+                            android:hint="From"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="7dp"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textSize="15sp" />
 
-                            <EditText
-                                android:id="@+id/from"
-                                android:layout_width="match_parent"
-                                android:layout_height="35dp"
-                                android:background="@drawable/edittext_design"
-                                android:hint="From"
-                                android:gravity="center"
-                                android:padding="7dp"
-                                android:paddingLeft="10dp"
-                                android:layout_marginRight="25dp"
-                                android:layout_marginLeft="25dp"
-                                android:textSize="15sp"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:singleLine="true"/>
-
-                        </android.support.design.widget.TextInputLayout>
+                    </android.support.design.widget.TextInputLayout>
 
 
-                        <android.support.design.widget.TextInputLayout
-                            android:textColorHint="#ffffff"
-                            android:layout_weight="1"
+                    <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColorHint="#86B7DF">
+
+                        <EditText
+                            android:id="@+id/to"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginRight="25dp"
+                            android:background="@drawable/edittext_design"
+                            android:gravity="center"
+                            android:hint="To"
+                            android:inputType="number"
+                            android:maxLines="1"
+                            android:padding="7dp"
+                            android:paddingLeft="10dp"
+                            android:singleLine="true"
+                            android:textSize="15sp" />
 
-                            <EditText
-                                android:id="@+id/to"
-                                android:layout_width="match_parent"
-                                android:layout_height="35dp"
-                                android:background="@drawable/edittext_design"
-                                android:hint="To"
-                                android:gravity="center"
-                                android:padding="7dp"
-                                android:paddingLeft="10dp"
-                                android:layout_marginRight="25dp"
-                                android:layout_marginLeft="25dp"
-                                android:textSize="15sp"
-                                android:inputType="number"
-                                android:maxLines="1"
-                                android:singleLine="true"/>
-
-                        </android.support.design.widget.TextInputLayout>
+                    </android.support.design.widget.TextInputLayout>
 
                 </LinearLayout>
+
                 <android.support.v7.widget.RecyclerView
                     android:id="@+id/recyclerview_room"
                     android:layout_width="match_parent"
@@ -262,27 +265,29 @@
                 <Button
                     android:id="@+id/btn_addRooms"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="35dp"
-                    android:layout_marginRight="35dp"
                     android:layout_marginTop="15dp"
+                    android:layout_marginRight="35dp"
+                    android:background="@drawable/btn_design"
                     android:text="Add Rooms"
-                    android:textColor="#ffffff"
                     android:textAllCaps="false"
-                    android:textSize="17sp"
-                    android:background="@drawable/btn_design"/>
+                    android:textColor="#ffffff"
+                    android:textSize="17sp" />
+
                 <Button
                     android:id="@+id/btn_addTrainingRooms"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="40dp"
                     android:layout_marginLeft="35dp"
-                    android:layout_marginRight="35dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginRight="35dp"
+                    android:layout_marginBottom="15dp"
+                    android:background="@drawable/btn_design"
                     android:text="Add Training Rooms"
-                    android:textColor="#ffffff"
                     android:textAllCaps="false"
-                    android:textSize="17sp"
-                    android:background="@drawable/btn_design"/>
+                    android:textColor="#ffffff"
+                    android:textSize="17sp" />
 
             </LinearLayout>
         </LinearLayout>

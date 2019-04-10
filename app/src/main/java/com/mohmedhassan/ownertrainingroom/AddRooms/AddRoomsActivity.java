@@ -19,19 +19,15 @@ public class AddRoomsActivity extends AppCompatActivity implements AddRoomsContr
 
         AddRooms = findViewById(R.id.add_rooms_AddRooms);
 
-        AddRooms.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent = new Intent(AddRoomsActivity.this, AddTrainingRoomsActivity.class);
-                startActivity(intent);
-            }
-        });
+        AddRooms.setOnClickListener(view->AddRooms());
     }
 
 
     @Override
     public void AddRooms() {
 
+        Intent intent = new Intent(AddRoomsActivity.this, AddTrainingRoomsActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

@@ -6,7 +6,8 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.mohmedhassan.ownertrainingroom.Login.LoginActivity">
+    android:background="@drawable/layout_design"
+    tools:context=".Login.LoginActivity">
 
     <LinearLayout
         android:layout_gravity="center"
@@ -17,8 +18,12 @@
 
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="150dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="#FFFCFC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:src="@drawable/training_courses"/>
 
     </LinearLayout>
@@ -27,27 +32,13 @@
         android:id="@+id/login_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="25dp"
         android:text="Login And Add Training Room"
         android:layout_gravity="center"
-        android:textColor="#ea080f"
+        android:textColor="#FFFCFC"
         android:textSize="20sp"/>
 
-    <android.support.v7.widget.CardView
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:elevation="5dp"
-        android:layout_marginTop="30dp"
-        android:id="@+id/cardview_work_space2"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0.0px"
-        android:background="#fcf9f9"
-        android:clipToPadding="true"
-        card_view:cardBackgroundColor="#ffffff"
-        android:clipChildren="true"
-        app:cardElevation="5dp"
-        app:cardPreventCornerOverlap="true">
+
 
         <LinearLayout
             android:id="@+id/email_login_form"
@@ -62,7 +53,7 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="5dp"
-                android:textColorHint="#E4DDDD"
+                android:textColorHint="#86B7DF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -73,7 +64,7 @@
                     android:background="@drawable/edittext_design"
                     android:hint="Email"
                     android:padding="7dp"
-                    android:textColor="#ffffff"
+                    android:textColor="#3F51B5"
                     android:gravity="center"
                     android:layout_gravity="center"
                     android:inputType="textEmailAddress"
@@ -87,7 +78,7 @@
 
             <android.support.design.widget.TextInputLayout
                 android:layout_marginTop="10dp"
-                android:textColorHint="#E4DDDD"
+                android:textColorHint="#86B7DF"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -99,7 +90,7 @@
                     android:hint="Password"
                     android:padding="7dp"
                     android:gravity="center"
-                    android:textColor="#ffffff"
+                    android:textColor="#3F51B5"
                     android:layout_gravity="center"
                     android:inputType="textPassword"
                     android:layout_marginBottom="15dp"
@@ -114,7 +105,7 @@
 
         </LinearLayout>
 
-    </android.support.v7.widget.CardView>
+  <!--  </android.support.v7.widget.CardView>-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -134,7 +125,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingRight="5dp"
-            android:textColor="#f20606"
+            android:textColor="#FFFCFC"
             android:text="Show Password"
             android:textSize="15sp" />
 
@@ -145,7 +136,7 @@
         android:id="@+id/btnlogin"
         style="?android:textAppearanceSmall"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:layout_marginRight="35dp"
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
@@ -163,7 +154,7 @@
         android:layout_height="wrap_content"
         android:textSize="17sp"
         android:layout_gravity="center"
-        android:textColor="#e76c07"
+        android:textColor="#FFFCFC"
         android:text="Not have email .. Create email ? "/>
 
     <TextView
@@ -173,7 +164,7 @@
         android:layout_marginTop="10dp"
         android:layout_gravity="center"
         android:textSize="17sp"
-        android:textColor="#e10c0c"
+        android:textColor="#FFFCFC"
         android:text="Contact Us ?"/>
 
     <TextView

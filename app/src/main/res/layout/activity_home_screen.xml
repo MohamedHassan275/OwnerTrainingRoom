@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
+    android:background="@drawable/layout_design"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".HomeScreen.HomeScreenActivity">
@@ -15,16 +16,30 @@
         <LinearLayout
             android:layout_gravity="center"
             android:orientation="vertical"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="100dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
                 android:id="@+id/image2"
                 android:layout_gravity="center"
+                android:background="#F8F8F8"
+                android:layout_marginRight="15dp"
+                android:layout_marginLeft="15dp"
                 android:layout_width="match_parent"
-                android:layout_height="150dp"
+                android:layout_height="wrap_content"
                 android:src="@drawable/training_courses"/>
+
+            <TextView
+                android:id="@+id/login_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="Login And Add Training Room"
+                android:layout_gravity="center"
+                android:textColor="#F7F7F7"
+                android:textSize="20sp"/>
+
 
             <Button
                 android:id="@+id/btn_ShowTrainngRooms"
