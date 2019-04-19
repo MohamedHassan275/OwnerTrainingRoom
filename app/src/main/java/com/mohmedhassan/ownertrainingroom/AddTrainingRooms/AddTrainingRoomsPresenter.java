@@ -2,9 +2,10 @@ package com.mohmedhassan.ownertrainingroom.AddTrainingRooms;
 
 import android.content.Context;
 
-import com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister.APIService;
-import com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister.APIUrl;
+
+
 import com.mohmedhassan.ownertrainingroom.Model_TrainingRoomsData.APIService_TrainingRoomsData;
+import com.mohmedhassan.ownertrainingroom.Model_TrainingRoomsData.APIUrl_TrainingRoomsData;
 import com.mohmedhassan.ownertrainingroom.Model_TrainingRoomsData.Result_TrainingRoomsData;
 
 import retrofit2.Call;
@@ -35,7 +36,7 @@ public class AddTrainingRoomsPresenter implements AddTrainingRoomsContract.Prese
 
 
 
-        Retrofit retrofit=new Retrofit.Builder().baseUrl(APIUrl.BASE_URL).addConverterFactory(GsonConverterFactory.create())
+        Retrofit retrofit=new Retrofit.Builder().baseUrl(APIUrl_TrainingRoomsData.BASE_URL).addConverterFactory(GsonConverterFactory.create())
                 .build();
         APIService_TrainingRoomsData apiService=retrofit.create(APIService_TrainingRoomsData.class);
         Call<Result_TrainingRoomsData> call=apiService.CreateTrainingRooms(Name,City,Area,Address,phone,Image,Starttime,Endtime,NumberRooms);
