@@ -13,7 +13,6 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-import retrofit2.http.Field;
 
 /**
  * Created by MOHMED on 4/2/2019.
@@ -36,7 +35,7 @@ public class AddTrainingRoomsPresenter implements AddTrainingRoomsContract.Prese
         Retrofit retrofit=new Retrofit.Builder().baseUrl(APIUrl_TrainingRoomsData.BASE_URL).addConverterFactory(GsonConverterFactory.create())
                 .build();
         APIService_TrainingRoomsData apiService=retrofit.create(APIService_TrainingRoomsData.class);
-        Call<Result_TrainingRoomsData> call=apiService.CreateTrainingRooms(Name,City,Area,Address,phone,Image,Starttime,Endtime,NumberRooms);
+        Call<Result_TrainingRoomsData> call=apiService.insert_TrainingRooms(Name,City,Area,Address,phone,Image,Starttime,Endtime,NumberRooms);
         call.enqueue(new Callback<Result_TrainingRoomsData>() {
             @Override
             public void onResponse(Call<Result_TrainingRoomsData> call, Response<Result_TrainingRoomsData> response) {

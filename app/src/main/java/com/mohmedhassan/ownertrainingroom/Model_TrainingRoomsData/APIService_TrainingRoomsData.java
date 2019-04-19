@@ -17,7 +17,7 @@ public  interface APIService_TrainingRoomsData {
 
     @FormUrlEncoded
     @POST("vendor.php")
-    Call<Result_TrainingRoomsData> CreateTrainingRooms(
+    Call<Result_TrainingRoomsData> insert_TrainingRooms(
             @Field("name") String name,
             @Field("city") String city,
             @Field("Area") String Area,
