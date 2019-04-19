@@ -13,7 +13,7 @@ public class RegisterPresenter implements RegisterContract.Presenter {
     }
 
     @Override
-    public void login(String email, String password, String phone, String city, String District, String gender) {
+    public void Register(String email, String password, String phone, String city, String District, String gender) {
 
     }
 }

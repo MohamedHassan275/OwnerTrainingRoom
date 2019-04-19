@@ -1,27 +1,33 @@
 package com.mohmedhassan.ownertrainingroom.Model_TrainingRoomsData;
 
-import com.mohmedhassan.ownertrainingroom.Model_LoginAndRegister.Result;
+
+import com.mohmedhassan.ownertrainingroom.Model_TrainingRoomsData.Result_TrainingRoomsData;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
-
+import retrofit2.http.PUT;
+import retrofit2.http.Path;
 /**
  * Created by MOHMED on 4/2/2019.
  */
 
-public class APIService_TrainingRoomsData {
+public  interface APIService_TrainingRoomsData {
 
-   /* @FormUrlEncoded
+    @FormUrlEncoded
     @POST("vendor.php")
-    Call<Result_TrainingRoomsData> addWorkSpace(
+    Call<Result_TrainingRoomsData> CreateTrainingRooms(
             @Field("name") String name,
-            @Field("email") String email,
-            @Field("password") String password,
-            @Field("phone") String phone,
             @Field("city") String city,
-            @Field("District") String District,
-            @Field("gender") String gender
-    );*/
+            @Field("Area") String Area,
+            @Field("Address") String Address ,
+            @Field("Phone") String Phone,
+            @Field("Image") String Image,
+            @Field("Starttime ") String Starttime,
+            @Field("Endtime ") String Endtime,
+            @Field("Numberofrooms ") String Numberofrooms
+
+
+    );
 }

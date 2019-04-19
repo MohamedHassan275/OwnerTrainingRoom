@@ -9,6 +9,6 @@ public interface RegisterContract {
 
     interface Presenter {
 
-        void login(String email, String password, String phone, String city, String District,String gender);
+        void Register(String email, String password, String phone, String city, String District,String gender);
     }
 }
