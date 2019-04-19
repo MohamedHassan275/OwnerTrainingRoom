@@ -32,6 +32,7 @@ public class AddTrainingRoomsActivity extends AppCompatActivity implements AddTr
     Button AddRoomss,AddTrainingRooms;
     private final static int PICK_IMAGE_REQUEST = 1;
     Context context;
+    private AddTrainingRoomsPresenter addTrainingRoomsPresenter;
     private GalleryAdapterTrainingRooms galleryAdapterTrainingRooms;
     private ArrayList<String> imageModels = new ArrayList<>();
     private ArrayList<Bitmap> bitmaparraylist = new ArrayList<Bitmap>();
@@ -185,6 +186,8 @@ public class AddTrainingRoomsActivity extends AppCompatActivity implements AddTr
         String numberOfRoomsStr=NumberOfRoomsInput.getEditText().getText().toString();
         String startTimeStr=StartTimeInput.getEditText().getText().toString();
         String endTimeStr=EndTimeInput.getEditText().getText().toString();
+        String recycleView_Image=recyclerview_image.getRecycledViewPool().getRecycledView(0).toString();
+
 
         boolean cancel = false;
         View focusView = null;
@@ -271,7 +274,8 @@ public class AddTrainingRoomsActivity extends AppCompatActivity implements AddTr
         }else {
             showProgress(true);
 
-
+            addTrainingRoomsPresenter.Creat_TrainingRooms(nameStr,cityStr,areaStr,addressStr,phoneStr,
+                    recycleView_Image, startTimeStr,endTimeStr,numberOfRoomsStr);
             Toast.makeText(this,"Send Data done!",Toast.LENGTH_SHORT).show();
 
         }
