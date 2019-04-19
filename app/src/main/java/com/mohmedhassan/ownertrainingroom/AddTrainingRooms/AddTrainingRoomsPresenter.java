@@ -33,9 +33,6 @@ public class AddTrainingRoomsPresenter implements AddTrainingRoomsContract.Prese
     @Override
     public  void Creat_TrainingRooms(String Name, String City, String Area, String Address, String phone, String Image, String Starttime, String Endtime, String NumberRooms) {
 
-
-
-
         Retrofit retrofit=new Retrofit.Builder().baseUrl(APIUrl_TrainingRoomsData.BASE_URL).addConverterFactory(GsonConverterFactory.create())
                 .build();
         APIService_TrainingRoomsData apiService=retrofit.create(APIService_TrainingRoomsData.class);
