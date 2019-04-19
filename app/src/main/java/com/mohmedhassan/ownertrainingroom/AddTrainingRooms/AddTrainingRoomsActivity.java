@@ -18,7 +18,6 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.mohmedhassan.ownertrainingroom.AddRooms.AddRoomsActivity;
-import com.mohmedhassan.ownertrainingroom.HomeScreen.HomeScreenActivity;
 import com.mohmedhassan.ownertrainingroom.R;
 
 import java.io.IOException;
@@ -139,23 +138,23 @@ public class AddTrainingRoomsActivity extends AppCompatActivity implements AddTr
     }
 
     @Override
-    public boolean isPhoneValid(String MobileNumber) {
-        return MobileNumber.length()>11;
+    public boolean isPhoneValid(String phone) {
+        return phone.length()>11;
     }
 
     @Override
-    public boolean isNumberRoomsValid(String NumberRooms) {
-        return NumberRooms.length()<0;
+    public boolean isNumberOfRoomsValid(String NumberOfRooms) {
+        return NumberOfRooms.length()<0;
     }
 
     @Override
-    public boolean isStartTimeValid(String FromTime) {
-        return FromTime.length()>24;
+    public boolean isStartTimeValid(String StartTime) {
+        return StartTime.length()>24;
     }
 
     @Override
-    public boolean isEndTimeValid(String ToTime) {
-        return ToTime.length()>24;
+    public boolean isEndTimeValid(String EndTime) {
+        return EndTime.length()>24;
     }
 
     @Override
@@ -243,7 +242,7 @@ public class AddTrainingRoomsActivity extends AppCompatActivity implements AddTr
             NumberOfRoomsInput.setError(getString(R.string.error_field_required));
             focusView = NumberOfRoomsInput;
             cancel = true;
-        } else if (!isNumberRoomsValid(numberOfRoomsStr)) {
+        } else if (!isNumberOfRoomsValid(numberOfRoomsStr)) {
             NumberOfRoomsInput.setError(getString(R.string.error_invalid_email));
             focusView = NumberOfRoomsInput;
             cancel = true;

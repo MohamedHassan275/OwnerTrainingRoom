@@ -16,10 +16,10 @@ public interface AddTrainingRoomsContract {
         boolean isCityValid(String City);
         boolean isAreaValid(String Area);
         boolean isAddressValid(String Address);
-        boolean isPhoneValid(String MobileNumber);
-        boolean isNumberRoomsValid (String NumberRooms);
-        boolean isStartTimeValid(String FromTime);
-        boolean isEndTimeValid(String ToTime);
+        boolean isPhoneValid(String phone);
+        boolean isNumberOfRoomsValid(String NumberOfRooms);
+        boolean isStartTimeValid(String StartTime);
+        boolean isEndTimeValid(String EndTime);
 
         void showMessage(String message);
     }
